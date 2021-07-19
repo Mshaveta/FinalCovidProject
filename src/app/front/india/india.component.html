@@ -1,0 +1,83 @@
+  <section class="u-align-center u-clearfix u-section-1" id="sec-bf57">
+  <div class='container'><br> 
+
+
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="card txt-align" style="background-color: #5851DB">
+          <div class="card-body">
+            <h5 class="card-title">Total Confirmed</h5>
+            <p class="card-text"><b class='cases_card_text'>{{ttl_confirmedCases}}</b></p>
+            <!--<a class="btn btn-primary" (click)="showStateDiv()">Check State Wise</a>-->
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card txt-align" style="background-color:#F43B57">
+          <div class="card-body">
+            <h5 class="card-title">Total Deceased</h5>
+            <p class="card-text"><b class='cases_card_text'>{{ttl_deathCases}}</b></p>
+            <!-- <a class="btn btn-primary" (click)="showStateDiv()">Check State Wise</a>-->
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card txt-align" style="background-color: #55EFC4;">
+          <div class="card-body">
+            <h5 class="card-title">Total Recovered</h5>
+            <p class="card-text"><b class='cases_card_text'>{{ttl_recovrCases}}</b></p>
+            <!--<a class="btn btn-primary" (click)="showStateDiv()">Check State Wise</a>-->
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card txt-align" style="background-color: #F274A1;">
+          <div class="card-body">
+            <h5 class="card-title">Total Vaccinated</h5>
+            <p class="card-text"><b class='cases_card_text'>{{ttl_vaccCases}}</b></p>
+            <!--<a class="btn btn-primary" (click)="showStateDiv()">Check State Wise</a>-->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <h3>State wise Data</h3>
+    <br>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">State</th>
+        <th scope="col">Confirmed</th>
+        <th scope="col">DeathCases</th>
+        <th scope="col">Recovered</th>
+        <th scope="col">Tested</th>
+        <th scope="col">vaccinated1</th>
+        <th scope="col">vaccinated2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let x of stateSummaryData; let i=index;">
+      
+        <th scope="row ">{{i+1}}</th>
+        <td>{{x.state}}</td>
+        <td>{{x.total.confirmed}}</td>
+        <td>{{x.total.deathCases}}</td>
+        <td>{{x.total.Recovered}}</td>
+        <td>{{x.total.Tested}}</td>
+        <td>{{x.total.vaccinated1}}</td>
+        <td>{{x.total.vaccinated2}}</td>
+      </tr>
+       
+    </tbody>
+  </table>
+  </div>
+  </section>
+  
